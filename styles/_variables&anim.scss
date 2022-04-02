@@ -1,0 +1,62 @@
+/* VARIABLES */
+
+$primaryClr: #9356dc;
+$secondaryClr: #ff79da;
+$tertiaryClr: #99e2d0;
+
+/* ANIMATION CARTES APPEAR */
+
+@keyframes itemAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ANIMATION CARTE CHECK */
+
+/* Texte qui se décale */
+
+.carte:hover .carte__prix {
+  margin-right: 20%;
+}
+
+.carte:hover h3 {
+  margin-right: 20%;
+}
+/* Check mark appear */
+
+.carte__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $tertiaryClr;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  border-radius: 0 20px 20px 0;
+  margin-right: -20%;
+  transition: margin-right 0.5s ease-in;
+}
+
+.menu .carte:hover .carte__check {
+  margin-right: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Check mark rotate*/
+.carte__check .fa-circle-check {
+  color: white;
+  font-size: 2em;
+  transform: rotate(-180deg);
+  transition: transform 0.2s ease-in 0.4s;
+}
+
+.menu .carte:hover .fa-circle-check {
+  transform: rotate(0);
+  animation-fill-mode: forwards;
+}
