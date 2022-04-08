@@ -17,7 +17,8 @@ $tertiaryClr: #99e2d0;
 
 /* ANIMATION CARTE CHECK */
 
-/* Texte qui se décale */
+
+/* Texte qui disparait */
 
 .carte:hover .carte__prix {
   margin-right: 20%;
@@ -26,6 +27,7 @@ $tertiaryClr: #99e2d0;
 .carte:hover h3 {
   margin-right: 20%;
 }
+
 /* Check mark appear */
 
 .carte__check {
@@ -48,7 +50,8 @@ $tertiaryClr: #99e2d0;
   animation-fill-mode: forwards;
 }
 
-/* Check mark rotate*/
+/* Rotation */
+
 .carte__check .fa-circle-check {
   color: white;
   font-size: 2em;

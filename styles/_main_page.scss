@@ -158,6 +158,7 @@ header {
   padding: 60px 0;
   .restaurants__gallery {
     margin-top: 30px;
+    
     /* CARTE */
     .carte {
       background-color: white;
@@ -262,24 +263,4 @@ footer {
       width: 600px;
     }
   }
-
-  /* A MODIFIER */
-  /*
-  .menu__parties {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .partie {
-    width: 31%;
-  }
-
-  .check {
-    width: 60px;
-  }
-
-  .menu_carte:hover .prix {
-    transform: translateX(-50px);
-  }*/
 }
