@@ -120,10 +120,12 @@ header {
       content: "2";
     }
     .carte3{
-      background-color: #d4b1ff ;
-      color: $primaryClr;
+      background-color: #f1e6fd ;
       &::before {
         content: "3";
+      }
+      i{
+        color: $primaryClr;
       }
     }
   }

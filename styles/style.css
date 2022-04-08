@@ -286,6 +286,15 @@ header .header__location p {
   content: "3";
 }
 
+.fonctionnement .fonctionnement__option .carte3{
+  background-color: #f1e6fd;
+}
+
+.fonctionnement .fonctionnement__option .carte3 i{
+  color: #9356dc;
+}
+
+
 /* SECTION RESTAURANTS */
 .restaurants {
   background-color: #f0f0f0;
