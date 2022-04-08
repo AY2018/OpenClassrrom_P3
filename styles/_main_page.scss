@@ -119,8 +119,12 @@ header {
     .carte2::before {
       content: "2";
     }
-    .carte3::before {
-      content: "3";
+    .carte3{
+      background-color: #d4b1ff ;
+      color: $primaryClr;
+      &::before {
+        content: "3";
+      }
     }
   }
 }
