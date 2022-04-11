@@ -567,12 +567,14 @@ footer .lien_icon2::before {
 /* HEADER */
 header {
   position: relative;
-  /*.fa-arrow-left {
-    font-size: 1.8em;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-  }*/
+}
+
+header .fa-arrow-left {
+  font-size: 1.8em;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 2;
 }
 
 /* BACKGROUND IMG */
