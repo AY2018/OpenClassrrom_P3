@@ -579,11 +579,13 @@ header .fa-arrow-left {
 
 /* BACKGROUND IMG */
 .background_img {
-  height: 40vh;
+  height: 50vh;
 }
 
 .background_img img {
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* MENU */
