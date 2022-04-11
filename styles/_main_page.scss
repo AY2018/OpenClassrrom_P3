@@ -45,18 +45,21 @@ header {
       width: 200px;
     }
   }
+}
 
-  .header__location {
-    background-color: #e6e6e6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    color: #6e6e6e;
 
-    p {
-      margin-left: 15px;
-    }
+/* lOCATION */
+
+.location {
+  background-color: #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  color: #6e6e6e;
+
+  p {
+    margin-left: 15px;
   }
 }
 

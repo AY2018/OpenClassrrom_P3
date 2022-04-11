@@ -239,7 +239,8 @@ header .header__logo img {
   width: 200px;
 }
 
-header .header__location {
+/* lOCATION */
+.location {
   background-color: #e6e6e6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -254,7 +255,7 @@ header .header__location {
   color: #6e6e6e;
 }
 
-header .header__location p {
+.location p {
   margin-left: 15px;
 }
 
@@ -566,13 +567,12 @@ footer .lien_icon2::before {
 /* HEADER */
 header {
   position: relative;
-}
-
-header .fa-arrow-left {
-  font-size: 1.8em;
-  position: absolute;
-  left: 20px;
-  top: 20px;
+  /*.fa-arrow-left {
+    font-size: 1.8em;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }*/
 }
 
 /* BACKGROUND IMG */
