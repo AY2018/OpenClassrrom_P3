@@ -5,7 +5,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 ul {
@@ -40,6 +40,65 @@ a {
 }
 
 /* VARIABLES */
+/* ANIMATION LOADER */
+/* Loader rotate */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/* Loader disapear */
+@-webkit-keyframes itemDisappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes itemDisappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes divDisappear {
+  0% {
+    z-index: 10;
+  }
+  100% {
+    z-index: -10;
+  }
+}
+
+@keyframes divDisappear {
+  0% {
+    z-index: 10;
+  }
+  100% {
+    z-index: -10;
+  }
+}
+
 /* ANIMATION CARTES APPEAR */
 @-webkit-keyframes itemAppear {
   0% {
@@ -59,7 +118,7 @@ a {
 }
 
 /* ANIMATION CARTE CHECK */
-/* Texte qui se décale */
+/* Texte qui disparait */
 .carte:hover .carte__prix {
   margin-right: 20%;
 }
@@ -97,7 +156,7 @@ a {
           animation-fill-mode: forwards;
 }
 
-/* Check mark rotate*/
+/* Rotation */
 .carte__check .fa-circle-check {
   color: white;
   font-size: 2em;
@@ -114,6 +173,41 @@ a {
           transform: rotate(0);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+/* LOADER */
+.loader {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  -webkit-animation: itemDisappear 2s ease-in forwards, divDisappear 0s 2s forwards;
+          animation: itemDisappear 2s ease-in forwards, divDisappear 0s 2s forwards;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.loader .loader__element {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #9356dc;
+  border-bottom: 16px solid #ff79da;
+  border-left: 16px solid transparent;
+  border-right: 16px solid #C968DB;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
 /* HEADER */
@@ -194,12 +288,17 @@ header .header__location p {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(#ff79da, #9356dc);
   color: white;
-  font-weight: bold;
   padding: 17px;
   border-radius: 40px;
   margin-top: 30px;
   -webkit-box-shadow: 2px 2px 10px lightgray;
           box-shadow: 2px 2px 10px lightgray;
+}
+
+.showcase a:hover {
+  -webkit-box-shadow: 2px 2px 10px #b1b1b1;
+          box-shadow: 2px 2px 10px #b1b1b1;
+  font-weight: bold;
 }
 
 /* SECTION FONCTIONNEMENT */
@@ -282,18 +381,17 @@ header .header__location p {
   content: "2";
 }
 
+.fonctionnement .fonctionnement__option .carte3 {
+  background-color: #f1e6fd;
+}
+
 .fonctionnement .fonctionnement__option .carte3::before {
   content: "3";
 }
 
-.fonctionnement .fonctionnement__option .carte3{
-  background-color: #f1e6fd;
-}
-
-.fonctionnement .fonctionnement__option .carte3 i{
+.fonctionnement .fonctionnement__option .carte3 i {
   color: #9356dc;
 }
-
 
 /* SECTION RESTAURANTS */
 .restaurants {
@@ -371,6 +469,10 @@ header .header__location p {
   left: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
+  -webkit-transition: -webkit-transform ease-in 0.1s;
+  transition: -webkit-transform ease-in 0.1s;
+  transition: transform ease-in 0.1s;
+  transition: transform ease-in 0.1s, -webkit-transform ease-in 0.1s;
 }
 
 .restaurants .restaurants__gallery .carte .carte__description .carte__heart:hover::after {
@@ -428,7 +530,7 @@ footer .lien_icon2::before {
 
 /* MEDIA QUERIES */
 /* Tablette */
-@media (min-width: 678px) {
+@media (min-width: 768px) {
   .restaurants__gallery {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -537,6 +639,10 @@ header .fa-arrow-left {
   left: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
+  -webkit-transition: -webkit-transform ease-in 0.1s;
+  transition: -webkit-transform ease-in 0.1s;
+  transition: transform ease-in 0.1s;
+  transition: transform ease-in 0.1s, -webkit-transform ease-in 0.1s;
 }
 
 .menu .menu__title i:hover::after {
@@ -650,13 +756,18 @@ header .fa-arrow-left {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(#ff79da, #9356dc);
   color: white;
-  font-weight: bold;
   padding: 17px;
   border-radius: 40px;
   margin-top: 30px;
   -webkit-box-shadow: 2px 2px 10px lightgray;
           box-shadow: 2px 2px 10px lightgray;
   padding: 20px 100px;
+}
+
+.menu .menu__parties .button .btn:hover {
+  -webkit-box-shadow: 2px 2px 10px #b1b1b1;
+          box-shadow: 2px 2px 10px #b1b1b1;
+  font-weight: bold;
 }
 
 /* MEDIA QUERIES */

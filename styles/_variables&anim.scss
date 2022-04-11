@@ -4,6 +4,45 @@ $primaryClr: #9356dc;
 $secondaryClr: #ff79da;
 $tertiaryClr: #99e2d0;
 
+
+
+/* ANIMATION LOADER */
+
+/* Loader rotate */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loader disapear */
+
+@keyframes itemDisappear {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes divDisappear {
+  0% {
+    z-index:10;
+  }
+
+  100% {
+    z-index: -10;
+  }
+}
+
+
+
 /* ANIMATION CARTES APPEAR */
 
 @keyframes itemAppear {

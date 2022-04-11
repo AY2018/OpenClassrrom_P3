@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&family=Roboto:wght@300;400;700&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b4ff4a2621.js" crossorigin="anonymous"></script>
     
     <title>Ohmyfood | Restaurant</title>
 </head>
 <body>
+    <!-- LOADER -->
+    <div class="loader">
+        <div class="loader__element"></div>
+    </div>
     <!-- HEADER -->
     <header>
         <div class="header__logo">
@@ -58,7 +62,7 @@
             <div class="container">
                 <h1>Restaurants</h1>
                 <div class="restaurants__gallery">
-                    <div class="carte carte--nouveau">
+                    <a class="carte carte--nouveau" href="./pages/La_palette_du_goût.html">
                         <div class="carte__photo">
                             <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'un plat servit">
                         </div>
@@ -69,8 +73,8 @@
                             </div>
                             <i class="carte__heart fa-regular fa-heart"></i>
                         </div>
-                    </div>
-                    <div class="carte carte--nouveau">
+                    </a>
+                    <a href="./pages/La_note_enchantée.html" class="carte carte--nouveau">
                         <div class="carte__photo">
                             <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo d'un plat servit">
                         </div>
@@ -81,8 +85,8 @@
                             </div>
                             <i class="carte__heart fa-regular fa-heart"></i>
                         </div>
-                    </div>
-                    <div class="carte">
+                    </a>
+                    <a href="./pages/À_la_française.html" class="carte">
                         <div class="carte__photo">
                             <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo d'un plat servit">
                         </div>
@@ -93,8 +97,8 @@
                             </div>
                             <i class="carte__heart fa-regular fa-heart"></i>
                         </div>
-                    </div>
-                    <div class="carte">
+                    </a>
+                    <a href="./pages/Le_délice_des_sens.html" class="carte">
                         <div class="carte__photo">
                             <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo d'un plat servit">
                         </div>
@@ -105,7 +109,7 @@
                             </div>
                             <i class="carte__heart fa-regular fa-heart"></i>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -117,7 +121,7 @@
             <a class="lien_icon1" href="#">Proposer un restaurant</a>
             <a class="lien_icon2" href="#">Devenir partenaire</a>
             <a href="#">Mentions légales</a>
-            <a href="#">Contact</a>
+            <a href="mailto:contact@ohmyfood.com">Contact</a>
         </footer>   
 </body>
 </html>
