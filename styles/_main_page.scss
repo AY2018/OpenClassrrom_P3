@@ -195,6 +195,9 @@ header {
   padding: 60px 0;
   .restaurants__gallery {
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
     /* CARTE */
     .carte {
@@ -281,9 +284,7 @@ footer {
 /* Tablette */
 @media (min-width: 768px) {
   .restaurants__gallery {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
     .carte {
       width: 48%;
