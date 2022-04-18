@@ -540,21 +540,6 @@ footer .lien_icon2::before {
 }
 
 /* MEDIA QUERIES */
-/* Tablette */
-@media (min-width: 768px) {
-  .restaurants__gallery {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .restaurants__gallery .carte {
-    width: 48%;
-  }
-}
-
 /* PC */
 @media (min-width: 992px) {
   .fonctionnement__option {

@@ -281,17 +281,6 @@ footer {
 
 /* MEDIA QUERIES */
 
-/* Tablette */
-@media (min-width: 768px) {
-  .restaurants__gallery {
-    flex-direction: row;
-    flex-wrap: wrap;
-    .carte {
-      width: 48%;
-    }
-  }
-}
-
 /* PC */
 
 @media (min-width: 992px) {
